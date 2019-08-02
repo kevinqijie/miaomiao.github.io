@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/',
   devServer: {
     // open: true, // 浏览器自动打开页面
     // host: '192.168.0.111', // 如果是真机测试，就使用这个IP
