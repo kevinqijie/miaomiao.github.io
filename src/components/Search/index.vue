@@ -45,7 +45,7 @@ export default {
       // 取消上一次请求
       this.cancelRequest();
       this.axios
-        .get("http://39.97.33.178/api/searchList?cityId=10&kw=" + val, {
+        .get("/api/searchList?cityId=10&kw=" + val, {
           cancelToken: new this.axios.CancelToken(function executor(c) {
             that.source = c;
           })

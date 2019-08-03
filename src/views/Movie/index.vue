@@ -55,7 +55,7 @@ export default {
     Footer
   },
   created(){
-    this.axios.get("http://39.97.33.178/api/getLocation").then(res => {
+    this.axios.get("/api/getLocation").then(res => {
       if (res.data.msg == "ok") {
         this.Location = res.data.data;
         // console.log(this.Location.id, 1);

@@ -30,7 +30,7 @@ export default {
     getlist(){
       var cityId = JSON.parse(localStorage.getItem('city')).id
       // console.log(cityId)
-      this.axios.get('http://39.97.33.178/api/movieOnInfoList?cityId='+cityId)
+      this.axios.get('/api/movieOnInfoList?cityId='+cityId)
       .then(res=>{
        if(res.data.msg === 'ok'){
          this.movielists = res.data.data.movieList;
