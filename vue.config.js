@@ -80,9 +80,9 @@ module.exports = {
     proxy: {
       // 配置跨域
       '/api': {
-        target: 'http://39.97.33.178',
+        target: 'http://39.97.33.178/api',
         ws: true,
-        changOrigin: true,
+        changOrigin: false,
         pathRewrite: {
           '^/api': '/'
         }
