@@ -5,6 +5,8 @@ import store from './store'
 import axios from 'axios'
 
 Vue.prototype.axios = axios
+axios.defaults.timeout = 5000 // 请求超时
+axios.defaults.baseURL = 'http://api.demourl.com/'
 Vue.config.productionTip = false
 Vue.filter('setWH', (url, num) => {
   return url.replace(/w\.h/, num)
