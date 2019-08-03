@@ -42,7 +42,7 @@ export default {
   methods: {
     getcitylsit() {
       this.axios
-        .get("/api/cityList")
+        .get("http://39.97.33.178/api/cityList")
         .then(res => {
           if (res.data.msg === "ok") {
             var citys = res.data.data.cities;

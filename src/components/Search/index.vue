@@ -17,24 +17,7 @@
           <div class="btn">购票</div>
         </li>
       </ul>
-      <!-- <h3>影院</h3>
-      <ul class="list">
-        <li v-for="it in cinema" :key="it.type">
-          <div class="informationbox">
-            <img :src="it.img | setWH('120.180')" />
-            <div class="information">
-              <h3>{{it.nm}}</h3>
-              <p>
-               {{it.enm}}
-              </p>
-              <p>{{it.cat}}</p>
-              <p>{{it.rt}}</p>
-            </div>
-          </div>
-          <div class="btn">购票</div>
-          
-        </li>
-      </ul>-->
+    
     </div>
   </div>
 </template>
@@ -62,7 +45,7 @@ export default {
       // 取消上一次请求
       this.cancelRequest();
       this.axios
-        .get("/api/searchList?cityId=10&kw=" + val, {
+        .get("http://39.97.33.178/api/searchList?cityId=10&kw=" + val, {
           cancelToken: new this.axios.CancelToken(function executor(c) {
             that.source = c;
           })

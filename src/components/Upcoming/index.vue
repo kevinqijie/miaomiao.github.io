@@ -29,7 +29,7 @@ export default {
   methods:{
     getlist(){
       var cityId = JSON.parse(localStorage.getItem('city')).id
-      this.axios.get('/api/movieComingList?cityId='+cityId)
+      this.axios.get('http://39.97.33.178/api/movieComingList?cityId='+cityId)
       .then(res=>{
        if(res.data.msg === 'ok'){
          this.cominglists = res.data.data.comingList;
